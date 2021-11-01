@@ -1,0 +1,23 @@
+development:
+  adapter: postgresql
+  database: includes_dev
+  host: localhost
+  username: scott
+  password: scott
+  encoding: utf8
+  min_messages: error
+
+test:
+  adapter: postgresql
+  database: includes_test
+  host: localhost
+  username: scott
+  encoding: utf8
+  min_messages: error
+
+production:
+  adapter: postgresql
+  database: includes_prod
+  host: localhost
+  encoding: utf8
+  min_messages: error
