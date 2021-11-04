@@ -1,0 +1,26 @@
+<table>
+  <thead>
+    <tr>
+      <th>City</th>
+      <th>Author</th>
+      <th>Article</th>
+      <th>Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @cities.each do |city| %>
+      <% city.authors.each do |author| %>
+        <% author.articles.each do |article| %>
+          <% article.comments.each do |comment| %>
+            <tr>
+              <td><%= city.name %></td>
+              <td><%= author.name %></td>
+              <td><%= article.title %></td>
+              <td><%= comment.body_text %></td>
+            </tr>
+          <% end %>
+        <% end %>
+      <% end %>
+    <% end %>
+  </tbody>
+</table>

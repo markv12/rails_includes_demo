@@ -1,8 +1,29 @@
 body {
+  display: flex;
   text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .container {
   max-width: 1000px;
   margin-top: 50px;
+  text-align: left;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+td, th {
+  padding: 4px 6px 4px 6px;
+}
+
+th {
+  background: black;
+  color: white;
+}
+
+table {
+  border-collapse: collapse;
 }
