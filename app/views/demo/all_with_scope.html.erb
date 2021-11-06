@@ -10,12 +10,12 @@
   <tbody>
     <% @authors.each do |author| %>
       <% author.articles.each do |article| %>
-        <% article.comments.each do |comment| %>
+        <% article.comments.with_at_least_5_likes.each do |comment| %>
           <tr>
             <td><%= author.name %></td>
             <td><%= author.city.name %></td>
             <td><%= article.title %></td>
-            <td><%= comment.body_text %></td>
+            <td><%= comment.body_text %> (Likes: <%= comment.like_count %>)</td>
           </tr>
         <% end %>
       <% end %>

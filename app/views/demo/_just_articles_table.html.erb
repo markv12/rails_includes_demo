@@ -1,0 +1,18 @@
+<table>
+  <thead>
+    <tr>
+      <th>Author</th>
+      <th>Article</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @authors.each do |author| %>
+      <% author.articles.each do |article| %>
+        <tr>
+          <td><%= author.name %></td>
+          <td><%= article.title %></td>
+        </tr>
+      <% end %>
+    <% end %>
+  </tbody>
+</table>
