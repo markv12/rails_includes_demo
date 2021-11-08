@@ -22,7 +22,8 @@ city2 = City.create_or_update(id: 2, name: 'Austin')
 
 authors = [
   Author.create_or_update(id: 1, name: 'Janet', age: 44, city_id: city1.id),
-  Author.create_or_update(id: 2, name: 'Jim', age: 36, city_id: city2.id)
+  Author.create_or_update(id: 2, name: 'Jim', age: 36, city_id: city2.id),
+  Author.create_or_update(id: 3, name: 'Julian', age: 49, city_id: city2.id)
 ]
 
 current_id = 1

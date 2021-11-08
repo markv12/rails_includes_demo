@@ -9,6 +9,7 @@ class DemoController < ApplicationController
 
   def all_full_includes
     @authors = Author.includes([:city, {articles: :comments}]).all
+    #@authors = Author.preload([:city, {articles: :comments}]).all
     #@authors = Author.joins([:city]).includes([:city, {articles: :comments}]).all
   end
 
@@ -32,10 +33,23 @@ class DemoController < ApplicationController
     @authors = Author.includes([:city, :articles]).all
     #@authors = Author.includes([:city, {articles: :comments}]).all
     #@authors = Author.joins({articles: :comments}).includes([:city, {articles: :comments}]).where('comments.like_count >= ?', 5).all
+    #@authors = Author.eager_load([:city, {articles: :comments}]).where('comments.like_count >= ?', 5).all
+  end
+
+  def all_with_association
+    @authors = Author.includes([:city, {articles: :comments_with_at_least_5_likes}]).all
   end
 
   def all_with_select
     @authors = Author.includes([:city, {articles: :comments}]).all
+  end
+
+  def city_authors_with_scope
+    @cities = City.includes({authors: {articles: :comments}}).all
+  end
+
+  def city_authors_with_select
+    @cities = City.includes({authors: {articles: :comments}}).all
   end
 end
 

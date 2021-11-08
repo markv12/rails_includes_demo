@@ -1,0 +1,24 @@
+<table>
+  <thead>
+    <tr>
+      <th>Author</th>
+      <th>City</th>
+      <th>Article</th>
+      <th>Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @authors.each do |author| %>
+      <% author.articles.each do |article| %>
+        <% article.comments_with_at_least_5_likes.each do |comment| %>
+          <tr>
+            <td><%= author.name %></td>
+            <td><%= author.city.name %></td>
+            <td><%= article.title %></td>
+            <td><%= comment.body_text %> (Likes: <%= comment.like_count %>)</td>
+          </tr>
+        <% end %>
+      <% end %>
+    <% end %>
+  </tbody>
+</table>
