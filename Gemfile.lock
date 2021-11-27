@@ -136,6 +136,7 @@ GEM
       actionpack (>= 5.2)
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
+    stackprof (0.2.17)
     thor (1.1.0)
     tilt (2.0.10)
     tzinfo (2.0.4)
@@ -160,6 +161,7 @@ DEPENDENCIES
   rack-mini-profiler
   rails (~> 6.1.4, >= 6.1.4.1)
   sass-rails
+  stackprof
   web-console
 
 RUBY VERSION
