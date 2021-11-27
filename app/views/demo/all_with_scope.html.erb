@@ -10,7 +10,7 @@
   <tbody>
     <% @authors.each do |author| %>
       <% author.articles.each do |article| %>
-        <% article.comments.with_at_least_5_likes.each do |comment| %>
+        <% article.comments.with_at_least_5_likes.order(:body_text).each do |comment| %>
           <tr>
             <td><%= author.name %></td>
             <td><%= author.city.name %></td>

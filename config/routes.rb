@@ -12,7 +12,4 @@ Rails.application.routes.draw do
   match '/all_with_scope', to: 'demo#all_with_scope', as: 'all_with_scope', via: :get
   match '/all_with_association', to: 'demo#all_with_association', as: 'all_with_association', via: :get
   match '/all_with_select', to: 'demo#all_with_select', as: 'all_with_select', via: :get
-
-  match '/city_authors_with_scope', to: 'demo#city_authors_with_scope', as: 'city_authors_with_scope', via: :get
-  match '/city_authors_with_select', to: 'demo#city_authors_with_select', as: 'city_authors_with_select', via: :get
 end
