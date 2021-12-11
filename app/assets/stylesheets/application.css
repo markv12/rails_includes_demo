@@ -3,6 +3,7 @@ body {
   text-align: center;
   justify-content: center;
   align-items: center;
+  background: #AAAAAA;
 }
 
 .container {
@@ -11,12 +12,22 @@ body {
   text-align: left;
 }
 
+#demo_container {
+  background: white;
+  padding: 20px;
+  border-radius: 6px;
+}
+
 table, th, td {
   border: 1px solid black;
 }
 
 td, th {
   padding: 4px 6px 4px 6px;
+}
+
+td {
+  background: white;
 }
 
 th {
